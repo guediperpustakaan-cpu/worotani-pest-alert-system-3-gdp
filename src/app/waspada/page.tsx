@@ -26,7 +26,9 @@ export default function WaspadaPage() {
   const pushToast = useToastStore((s) => s.push);
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     fetch("/api/reports?status=VERIFIED")

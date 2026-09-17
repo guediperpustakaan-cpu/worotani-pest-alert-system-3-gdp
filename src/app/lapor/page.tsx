@@ -62,7 +62,9 @@ export default function LaporPage() {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     fetch("/api/pests")

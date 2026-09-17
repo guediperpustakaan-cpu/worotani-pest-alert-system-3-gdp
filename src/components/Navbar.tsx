@@ -29,7 +29,9 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const [unread, setUnread] = useState(0);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!mounted || !user) {

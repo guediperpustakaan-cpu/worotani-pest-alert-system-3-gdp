@@ -64,7 +64,9 @@ export default function PetugasPage() {
   const pushToast = useToastStore((s) => s.push);
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const loadQueue = () => {
     fetch("/api/reports?status=PENDING")
