@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Toaster from "@/components/Toaster";
+import TrakteerWidget from "@/components/TrakteerWidget";
 
 export const metadata: Metadata = {
   title: "WoroTani — Sistem Peringatan Hama Gotong Royong",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Navbar />
         <main className="pb-20 md:pb-0">{children}</main>
         <Toaster />
+        <TrakteerWidget />
       </body>
     </html>
   );
